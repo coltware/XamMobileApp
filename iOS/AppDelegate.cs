@@ -1,5 +1,8 @@
 ﻿using Foundation;
 using UIKit;
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
 
 namespace XamMobileApp.iOS
 {
@@ -20,7 +23,8 @@ namespace XamMobileApp.iOS
 		{
 			// Override point for customization after application launch.
 			// If not required for your application you can safely delete this method
-
+			MobileCenter.Start("e2d75621-8c4e-4135-9d33-edfc0c29ae02",
+					typeof(Analytics), typeof(Crashes));
 			return true;
 		}
 
